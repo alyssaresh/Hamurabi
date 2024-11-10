@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d54f7f95-ced3-49df-96d6-2c6cd6903d32" name="Changes" comment="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit e8fe2a13">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hammurabi/Hammurabi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HammurabiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hammurabi/HammurabiTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2oazQwqlr8YTqEQQcqZWU3NKKah" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Hammurabi (1).executor": "Run",
+    "Application.Hammurabi.executor": "Run",
+    "Application.hammurabi.Hammurabi.executor": "Run",
+    "JUnit.HammurabiTest.executor": "Run",
+    "JUnit.HammurabiTest.testAcresToBuy.executor": "Run",
+    "JUnit.HammurabiTest.testPlagueDeaths1.executor": "Run",
+    "JUnit.HammurabiTest.testPrintSummary.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Users/aresh/Projects/Hamurabi/src/main/java/hammurabi",
+    "last_opened_file_path": "/Users/aresh/Projects/Hamurabi",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/hammurabi" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="hammurabi" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="hammurabi" />
+      <recent name="" />
+      <recent name="hammurabi.src.main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.hammurabi.Hammurabi">
+    <configuration name="Hammurabi (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hammurabi" />
+      <module name="Hamurabi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hammurabi.Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hammurabi.Hammurabi" />
+      <module name="Hamurabi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hammurabi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HammurabiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hamurabi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hammurabi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hammurabi" />
+      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HammurabiTest.testAcresToBuy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hamurabi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HammurabiTest" />
+      <option name="METHOD_NAME" value="testAcresToBuy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HammurabiTest.testPlagueDeaths1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hamurabi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hammurabi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hammurabi" />
+      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
+      <option name="METHOD_NAME" value="testPlagueDeaths1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.hammurabi.Hammurabi" />
+        <item itemvalue="JUnit.HammurabiTest" />
+        <item itemvalue="JUnit.HammurabiTest.testPlagueDeaths1" />
+        <item itemvalue="JUnit.HammurabiTest.testAcresToBuy" />
+        <item itemvalue="Application.Hammurabi (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d54f7f95-ced3-49df-96d6-2c6cd6903d32" name="Changes" comment="" />
+      <created>1731122461183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731122461183</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit e8fe2a13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit e8fe2a13" />
+  </component>
+</project>
