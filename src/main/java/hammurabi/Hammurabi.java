@@ -11,6 +11,11 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
     int acresOwned;
     int price; //random between 17-23 each year
     int year;
+    int acresToBuy;
+    int acresToSell;
+    int grainToFeed;
+    int acresToPlant;
+
 
     public static void main(String[] args) { // required in every Java program
         new Hammurabi().playGame();
@@ -22,10 +27,22 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
         acresOwned = 1000; // = acres - acresToSell or acres + acresToBuy
         price = 19; // random
         year = 1; // year + 1;
-        askHowManyAcresToBuy(price, bushels);
-        askHowManyAcresToSell(acresOwned);
-        askHowMuchGrainToFeedPeople(bushels);
-        askHowManyAcresToPlant(acresOwned, population, bushels);
+        while (year < 11) {
+            acresToBuy = askHowManyAcresToBuy(price, bushels);
+            acresOwned += acresToBuy;
+            bushels = acresToBuy*price;
+            if (acresToBuy == 0) {
+                acresToSell = askHowManyAcresToSell(acresOwned);
+                acresOwned -= acresToSell;
+            }
+            System.out.println(acresOwned);
+            grainToFeed = askHowMuchGrainToFeedPeople(bushels);
+            bushels -= grainToFeed;
+            System.out.println(bushels);
+            acresToPlant = askHowManyAcresToPlant(acresOwned, population, bushels);
+            bushels -= (acresToPlant*2);
+            System.out.println(bushels);
+        }
     }
 
     int askHowManyAcresToBuy(int price, int bushels) {
@@ -40,7 +57,8 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
                 System.out.println("But you don't have enough bushels!");
             }
             acresToBuy = getNumber("How many acres of land do you wish to buy?\n");
-        } return acresToBuy;
+        }
+        return acresToBuy;
     }
 
     int askHowManyAcresToSell(int acresOwned) {
@@ -52,12 +70,12 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
                 System.out.println("But you don't have enough acres!");
             } else break;
             acresToSell = getNumber("How many acres of land do you wish to sell?\n");
-        } return acresToSell;
+        }
+        return acresToSell;
     }
 
     int askHowMuchGrainToFeedPeople(int bushels) {
         int grainToFeed = getNumber("How much grain would you like to feed to your people?\n");
-        int bountifulHarvest = population * 20;
         while (true) {
             if (grainToFeed < 0) {
                 System.out.println("You can't take their food!");
@@ -66,9 +84,6 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
             } else break;
             grainToFeed = getNumber("How much grain would you like to feed to your people?\n");
         } return grainToFeed;
-        //can't feed them more grain than you have
-        //can overfeed them but no benefit
-        //each person needs at least 20 bushels to survive
     }
 
     int askHowManyAcresToPlant(int acresOwned, int population, int bushels) {
@@ -86,16 +101,12 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
                 System.out.println("You don't have enough grain!");
             }
             acresToPlant = getNumber("How many acres would you like to plant with grain?\n");
-        } return acresToPlant;
+        }
+        return acresToPlant;
     }
 
-        //must have enough acres, grain, & people to do the planting
-        //each person can farm at most 10 acres population * 10
-        //takes 2 bushels to farm 1 acre bushels/2
-        //leftover bushels go in storage for next year
 
-
-    static String printSummary() {
+    String printSummary(int year, int starvationDeaths, int immigrants, int population, int harvest, int harvestData, int ratFood, int bushels, int acresOwned, int price) {
         return "O great Hammurabi!\n" +
                 "You are in year 1 of your ten year rule.\n" +
                 "In the previous year 0 people starved to death.\n" +
