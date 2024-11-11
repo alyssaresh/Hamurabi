@@ -13,8 +13,13 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
     int year;
     int acresToBuy;
     int acresToSell;
-    int grainToFeed;
+    int bushelsToFeed;
     int acresToPlant;
+    int deaths;
+    int starved;
+    int immigrants;
+    int harvest;
+    int eaten;
 
 
     public static void main(String[] args) { // required in every Java program
@@ -28,20 +33,31 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
         price = 19; // random
         year = 1; // year + 1;
         while (year < 11) {
-            acresToBuy = askHowManyAcresToBuy(price, bushels);
-            acresOwned += acresToBuy;
-            bushels = acresToBuy*price;
-            if (acresToBuy == 0) {
-                acresToSell = askHowManyAcresToSell(acresOwned);
-                acresOwned -= acresToSell;
-            }
-            System.out.println(acresOwned);
-            grainToFeed = askHowMuchGrainToFeedPeople(bushels);
-            bushels -= grainToFeed;
-            System.out.println(bushels);
-            acresToPlant = askHowManyAcresToPlant(acresOwned, population, bushels);
-            bushels -= (acresToPlant*2);
-            System.out.println(bushels);
+//            acresToBuy = askHowManyAcresToBuy(price, bushels);
+//            acresOwned += acresToBuy;
+//            bushels = acresToBuy*price;
+//            if (acresToBuy == 0) {
+//                acresToSell = askHowManyAcresToSell(acresOwned);
+//                acresOwned -= acresToSell;
+//            }
+//            System.out.println(acresOwned);
+//            bushelsToFeed = askHowMuchGrainToFeedPeople(bushels);
+//            bushels -= grainToFeed;
+//            System.out.println(bushels);
+//            acresToPlant = askHowManyAcresToPlant(acresOwned, population, bushels);
+//            bushels -= (acresToPlant*2);
+//            System.out.println(bushels);
+//            plagueDeaths(population);
+//                population -= deaths;
+//                System.out.println(population);
+//            starvationDeaths(population, bushelsToFeed);
+//                population -= starved;
+//                System.out.println(population);
+//            uprising(population, starved);
+//            getImmigrants(population, acresOwned, bushels);
+            getHarvest(acresOwned, acresToPlant);
+
+                break;
         }
     }
 
@@ -75,15 +91,15 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
     }
 
     int askHowMuchGrainToFeedPeople(int bushels) {
-        int grainToFeed = getNumber("How much grain would you like to feed to your people?\n");
+        int bushelsToFeed = getNumber("How much grain would you like to feed to your people?\n");
         while (true) {
-            if (grainToFeed < 0) {
+            if (bushelsToFeed < 0) {
                 System.out.println("You can't take their food!");
-            } else if (grainToFeed > bushels) {
+            } else if (bushelsToFeed > bushels) {
                 System.out.println("But you don't have enough food!");
             } else break;
-            grainToFeed = getNumber("How much grain would you like to feed to your people?\n");
-        } return grainToFeed;
+            bushelsToFeed = getNumber("How much grain would you like to feed to your people?\n");
+        } return bushelsToFeed;
     }
 
     int askHowManyAcresToPlant(int acresOwned, int population, int bushels) {
@@ -103,6 +119,48 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
             acresToPlant = getNumber("How many acres would you like to plant with grain?\n");
         }
         return acresToPlant;
+    }
+
+    int plagueDeaths(int population){
+        if (rand.nextInt(100) < 15) {
+            deaths = (population/2);
+        } return deaths;
+    }
+
+    int starvationDeaths(int population, int bushelsToFeed){
+        if (bushelsToFeed < population*20){
+            starved = population - bushelsToFeed/20;
+        } return starved;
+    }
+
+    boolean uprising (int population, int starved) {
+        if (starved >= .45/population) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    int getImmigrants(int population, int acresOwned, int bushels){
+        immigrants = (20 * acresOwned + bushels) / (100 * population) + 1;
+        return immigrants;
+    }
+
+    int getHarvest(int acresOwned, int acresToPlant){
+        int harvestPerAcre = rand.nextInt(6) + 1;
+        harvest = harvestPerAcre * acresToPlant;
+        return harvest;
+    }
+
+    int grainEatenByRats(int bushels){
+        if (rand.nextInt(100) < 40){
+            eaten = bushels - (bushels/(rand.nextInt(21) + 10));
+        } return eaten;
+    }
+
+    int newCostOfLand(){
+        price = rand.nextInt(7) + 17;
+        return price;
     }
 
 
